@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz em Quadrantes</title>
+  <link rel="stylesheet" href="quiz.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="tela-inicial" class="tela-centralizada">
+    <div class="box-inicial">
+      <p>Bem vindo do quiz!!!<br>Boa sorte para descobrir os personagens</p>
+      <div class="botoes-inicial">
+        <button onclick="começarQuiz()">Começar!</button>
+        <button onclick="sairQuiz()">Quero não</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="quiz-box" style="display:none;">
+    <h1 class="titulo">Quiz de Personagens</h1>
+    <img id="imagem-pergunta" src="" alt="Personagem" />
+    <h2 id="question">Carregando pergunta...</h2>
+    <div class="grid-respostas">
+      <button class="resposta" id="resposta0" onclick="escolherResposta(0)"></button>
+      <button class="resposta" id="resposta1" onclick="escolherResposta(1)"></button>
+      <button class="resposta" id="resposta2" onclick="escolherResposta(2)"></button>
+      <button class="resposta" id="resposta3" onclick="escolherResposta(3)"></button>
+    </div>
+    <button id="next-btn" onclick="proximaPergunta()" style="display: none;">Próxima</button>
+  </div>
+
+  <div id="resultado" style="display: none;" class="tela-centralizada">
+    <div class="box-inicial">
+      <h2>Gostaria de Jogar Novamente?</h2>
+      <p id="pontuacao">Você acertou X de Y perguntas!</p>
+      <div class="botoes-inicial">
+        <button onclick="reiniciarQuiz()">Jogar novamente</button>
+        <button onclick="sairQuiz()">Quero não</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+:root {
+  --cor-background: #63B2C4;
+  --cor-botao: #2a5da8;
+  --cor-botao-texto: #FFFFFF;
+  --cor-texto: #000000;
+  --cor-acerto: #28a745;
+  --cor-erro: #dc3545;
+  --fonte-unica: 'Comic Relief', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-unica);
+  background-color: var(--cor-background);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.tela-centralizada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-inicial {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.botoes-inicial button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: var(--cor-botao);
+  color: var(--cor-botao-texto);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.botoes-inicial button:hover {
+  opacity: 0.8;
+}
+
+.grid-respostas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.resposta {
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--cor-botao);
+  color: var(--cor-botao-texto);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 100px;
+}
+
+.resposta:hover {
+  opacity: 0.8;
+}
+
+#next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--cor-acerto);
+  color: var(--cor-botao-texto);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#next-btn:hover {
+  opacity: 0.8;
+}
+
+#imagem-pergunta {
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+/* Animação */
+@keyframes rotate-scale-down-diag-2 {
+  0% { transform: scale(1) rotate3d(-1, 1, 0, 0deg); }
+  50% { transform: scale(0.5) rotate3d(-1, 1, 0, 180deg); }
+  100% { transform: scale(1) rotate3d(-1, 1, 0, 360deg); }
+}
+
+.animate {
+  animation: rotate-scale-down-diag-2 0.7s ease both;
+}
